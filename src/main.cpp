@@ -4,12 +4,17 @@
 using std::cout;
 using std::endl;
 
-int main() {
-
-    cout << "Hello world" << endl;
-    for (auto i = 0; i < 10; i++) {
-        cout << "\t* " << i << endl;
+int SDL_main(int argc, char* argv[]) {
+    std::cout << "Hello SDL2!" << std::endl;
+    
+    // Initialize SDL
+    if(SDL_Init(SDL_INIT_VIDEO) != 0) {
+        std::cerr << "SDL_Init Error: " << SDL_GetError() << std::endl;
+        return 1;
     }
 
+    // Your SDL code here...
+
+    SDL_Quit();
     return 0;
 }
