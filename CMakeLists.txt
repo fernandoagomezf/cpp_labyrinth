@@ -35,7 +35,8 @@ message(STATUS "SDL2_INCLUDE_DIRS: ${SDL2_INCLUDE_DIRS}")
 message(STATUS "SDL2_LIBRARIES: ${SDL2_LIBRARIES}")
 
 add_executable(LabyrinthGame
-    src/main.cpp
+    src/main.cpp 
+    src/gameapp.cpp
 )
 
 # Add this line to specify include directories
